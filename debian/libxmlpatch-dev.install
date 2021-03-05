@@ -1,0 +1,4 @@
+debian/tmp/usr/lib/pkgconfig/libxmlpatch.pc
+debian/tmp/usr/include/libxmlpatch/*.h
+debian/tmp/usr/lib/libxmlpatch.so
+debian/tmp/usr/lib/libxmlpatch.a

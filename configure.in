@@ -1,0 +1,100 @@
+dnl ===========================================================================
+dnl
+dnl Process this file with autoconf to produce a configure script.
+dnl This is part of an XML patch library.
+dnl
+dnl Copyright (C) 2005 Nokia Corporation.
+dnl
+dnl Contact: Jari Urpalainen <jari.urpalainen@nokia.com>
+dnl
+dnl This library is free software; you can redistribute it and/or
+dnl modify it under the terms of the GNU Lesser General Public
+dnl License as published by the Free Software Foundation; either
+dnl version 2.1 of the License, or (at your option) any later version.
+dnl
+dnl This library is distributed in the hope that it will be useful,
+dnl but WITHOUT ANY WARRANTY; without even the implied warranty of
+dnl MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+dnl Lesser General Public License for more details.
+dnl
+dnl You should have received a copy of the GNU Lesser General Public
+dnl License along with this library; if not, write to the Free Software
+dnl Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+dnl
+dnl ===========================================================================
+
+dnl ===========================================================================
+dnl Process this file with autoconf to produce a configure script.
+dnl ===========================================================================
+
+AC_INIT([libxmlpatch], [0.4.0])
+
+dnl ===========================================================================
+dnl Get host, target and build variables filled with appropriate info.
+dnl Validate cache.
+dnl ===========================================================================
+
+AC_CANONICAL_HOST
+
+dnl ===========================================================================
+dnl Init automake
+dnl ===========================================================================
+
+AM_INIT_AUTOMAKE([foreign])
+AM_CONFIG_HEADER(config.h)
+
+dnl ===========================================================================
+dnl Accepted arguments to ./configure...
+dnl ===========================================================================
+
+dnl AC_PREFIX_DEFAULT(/usr/local)
+
+dnl ===========================================================================
+dnl Checks for programs.
+dnl ===========================================================================
+
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_INSTALL
+AC_CHECK_PROG(RANLIB, ranlib, ranlib, echo)
+AC_CHECK_PROG(AR, ar, ar, echo)
+AC_CHECK_PROG(LD, ld, ld, echo)
+AC_PROG_LIBTOOL
+
+dnl ===========================================================================
+dnl Checks for header files.
+dnl ===========================================================================
+
+AC_HEADER_STDC
+
+AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
+if test "$PKG_CONFIG" == "no" ; then
+  AC_MSG_ERROR([You should install pkg-config])
+fi
+
+PKG_CHECK_MODULES(DEPS_XML, libxml-2.0)
+PKG_CHECK_MODULES(DEPS_GLIB, glib-2.0)
+
+AC_SUBST(DEPS_XML_CFLAGS)
+AC_SUBST(DEPS_XML_LIBS)
+
+AC_SUBST(DEPS_GLIB_CFLAGS)
+AC_SUBST(DEPS_GLIB_LIBS)
+
+AM_MISSING_PROG(HELP2MAN, help2man)
+
+dnl ===========================================================================
+dnl Output files
+dnl ===========================================================================
+
+AC_OUTPUT([
+Makefile
+xml-patch.spec
+src/Makefile
+src/libxmlpatch.pc
+diff/Makefile
+diff/libxmldiff.pc
+tests/Makefile
+man/Makefile
+])
+

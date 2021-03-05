@@ -1,0 +1,26 @@
+libxmlpatch (0.4.0) unstable; urgency=low
+
+  * removed check() library dependency, tests are run with glib g_test
+  * added (minimal) man pages to xml-diff and xml-patch
+  * lintian fixes
+
+ -- Jari Urpalainen <jari@urpalainen.fi>  Fri, 13 Jul 2012 13:50:00 +0300
+
+libxmlpatch (0.3.3) unstable; urgency=low
+
+  * some static analysis fixes
+
+ -- Jari Urpalainen <jari.urpalainen@nokia.com>  Wed,  3 Mar 2010 15:28:00 +0200
+
+libxmlpatch (0.3.2) unstable; urgency=low
+
+  * namespace handling bug in patch-library
+  * bug in diff generation library (Arshdeep Singh)
+
+ -- Jari Urpalainen <jari.urpalainen@nokia.com>  Wed, 13 Jan 2010 10:52:00 +0200
+
+libxmlpatch (0.3.1-1) unstable; urgency=low
+
+  * First debian release.
+
+ -- Jari Urpalainen <jari.urpalainen@nokia.com>  Fri, 19 Oct 2007 16:42:14 +0300

@@ -1,0 +1,2 @@
+debian/tmp/usr/lib/libxmlpatch.so.*
+debian/tmp/usr/bin/xml-patch

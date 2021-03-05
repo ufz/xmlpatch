@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/utils.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+
+#DEB_SHLIBDEPS_INCLUDE += debian/tmp/usr/lib
+
+DEB_DH_MAKESHLIBS_ARGS_ALL += -V
+
+DEB_MAKE_BUILD_TARGET = all
+DEB_MAKE_CHECK_TARGET = check
+
+DEB_CONFIGURE_EXTRA_FLAGS += \
+	--sysconfdir=/etc \
+	--prefix=/usr
+
+pre-build:: debian/stamp-autogen
+debian/stamp-autogen:
+	cd $(DEB_SRCDIR) && sh autogen.sh && touch $@
+
+clean::
+	rm -f debian/stamp-autogen

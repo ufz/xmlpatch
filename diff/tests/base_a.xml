@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<title xmlns:x="urn:foo" 
+       xmlns:d="urn:bar">
+  <bar xmlns="urn:huuhhaa:uri" a="2"/>
+</title>

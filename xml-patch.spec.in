@@ -1,0 +1,86 @@
+# being lazy...
+%define _unpackaged_files_terminate_build 0
+#
+#
+%define appname xml_patch
+
+Summary:   an XML patch library
+Name:      libxmlpatch
+Version:   @VERSION@
+Release:   1
+License:   LGPL
+Group:     Development/Libraries
+Source:    %{name}-%{version}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+Requires:  libxml2
+BuildRequires: libxml2-devel
+Prefix: %{_prefix}
+
+%package devel
+Summary: Libraries, includes to patch XML files
+Group: Development/Libraries
+Requires: libxml2 libxmlpatch = %{version}
+
+%description devel
+
+%prep
+%setup -q
+
+%post
+
+%build
+./configure --prefix=%{prefix} --libdir=%{_libdir}
+make
+
+%description
+
+%install
+rm -fr %{buildroot}
+
+%makeinstall
+
+%clean
+rm -fr %{buildroot}
+
+%files
+%defattr(-,root,root)
+%attr(0755,root,root) %{prefix}/bin/xml-patch
+%{_libdir}/libxmlpatch.so.*
+%doc AUTHORS ChangeLog tests NEWS README TODO LEGAL_NOTICE
+
+%files devel
+%{_libdir}/libxmlpatch.so
+%{_libdir}/libxmlpatch.a
+%{prefix}/include/libxmlpatch/*.h
+%{_libdir}/pkgconfig/libxmlpatch.pc
+
+
+%define appname xml_diff
+
+%package diff
+Summary:   an XML diff library
+Group:     Development/Libraries
+Requires:  libxml2 glib2
+Prefix: %{_prefix}
+%description diff
+
+%files diff
+%defattr(-,root,root)
+%attr(0755,root,root) %{prefix}/bin/xml-diff
+%{_libdir}/libxmldiff.so.*
+%doc LEGAL_NOTICE diff/tests AUTHORS NEWS README TODO
+
+%package diff-devel
+Summary: Libraries, includes, etc. to develop XML and HTML applications
+Group: Development/Libraries
+BuildRequires: libxml2-devel glib2-devel
+Requires:  libxml2 glib2 %{name}-diff = %{version}
+
+%description diff-devel
+
+%files diff-devel
+%{_libdir}/libxmldiff.so
+%{_libdir}/libxmldiff.a
+%{prefix}/include/libxmldiff/*.h
+%{_libdir}/pkgconfig/libxmldiff.pc
+

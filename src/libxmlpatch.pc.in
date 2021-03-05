@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libxmlpatch
+Description: an xml-patch library
+Version: 0.1.0
+Requires: libxml-2.0
+Libs: -L${libdir} -lxmlpatch
+Cflags: -I${includedir}/libxmlpatch

@@ -1,0 +1,12 @@
+NOTICE AND DISCLAIMER RELATING TO CERTAIN LEGAL ASPECTS OF THIS SOFTWARE  (the Software)
+
+Nokia provides the Software solely as proof-of-concept implementation for the purposes of the IETF internet draft "draft-ietf-simple-partial-notify" (the Draft) subject to the terms and conditions of the GNU Lesser General Public License (the License). Please note that in addition to the terms and provisions of the License, Nokia as the sole copyright holder of this Software places the following conditions for the use of the Software:  
+
+Nokia has made a patent statement to the IETF regarding the Draft, to the extent the Draft is included into final IETF standard specification. Statement is available at http://www.ietf.org/ietf/IPR/nokia-ipr-draft-ietf-simple-partial-notify.txt 
+Nothing herein shall supersede the rights, obligations, or limitations specified in that statement.
+
+No patent licenses or other rights except those expressly stated in the License shall be deemed granted or received expressly, by implication, estoppel, or otherwise.
+
+No assurances are provided by Nokia that the Software does not infringe the patent or other intellectual property rights of any entity or that the License provides you with all the necessary rights to make use of the Software. For example, if a third party patent license is required to allow you to distribute or commercially make use of Software, it is your responsibility to acquire the necessary licenses before such distribution or making use of the Software. 
+
+The Software is not intended for production use and may contain errors affecting its proper operation. THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. IN ADDITION TO THE DISCLAIMERS INCLUDED IN THE LICENSE, NOKIA SPECIFICALLY DISCLAIMS ANY LIABILITY FOR CLAIMS BROUGHT BY YOU OR ANY OTHER ENTITY BASED ON INFRINGEMENT OF INTELLECTUAL PROPERTY RIGHTS OR OTHERWISE. YOU ARE HEREBY ADVISED OF THESE ISSUES AND THEREFORE ASSUME THE SOLE RESPONSIBILITY TO SECURE ANY OTHER INTELLECTUAL PROPERTY RIGHTS AND/OR LICENSES THAT MAY BE NEEDED. 

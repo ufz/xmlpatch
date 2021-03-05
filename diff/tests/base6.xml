@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<artwork><![CDATA[					
+<?xml version="1.0" encoding="UTF-8"?> 
+<p:pidf-full xmlns="urn:ietf:params:xml:ns:pidf"
+       entity="pres:someone@example.com"
+       version="567"> 
+</p:pidf-full> 
+]]>
+</artwork>

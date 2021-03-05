@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2012-07-13 09:28:24</datetime>
+  <suite>
+    <title>xml_diff tests</title>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_1_to_2</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_1_to_3</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_1_to_4</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_1_to_5</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_2_to_1</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_3_to_1</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_4_to_1</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_5_to_1</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_from_to</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_to_from</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_n_0_to_1</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_n_0_to_2</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_n_2_to_0</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>check_diff.c:150</fn>
+      <id>test_n_1_to_0</id>
+      <iteration>0</iteration>
+      <description>diff-tests</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.000000</duration>
+</testsuites>

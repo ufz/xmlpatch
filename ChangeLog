@@ -1,0 +1,55 @@
+Later changes, look debian/changelog
+
+
+22.10.2007 Jari Urpalainen
+	* debian/*:
+	- added debian files for building
+	* xml_diff.c:
+	- if changes in the document root element, return <replace>
+
+31.01.2006 Jari Urpalainen
+	* added diff directory with a trivial auto diff algorithm
+	* xml_patch.c:
+	- CDATA sections within text nodes handled properly
+	- added "prepend" option and removed positional selections
+
+07.12.2005 Jari Urpalainen
+	* xml_patch.c:
+	- some signed/unsigned fixes
+	- stupid for loop bug fixed
+
+05.12.2005 Jari Urpalainen
+	* xml_patch.c:
+	- fixed an improper handling of xmlGetNsList result
+
+23.11.2005 Jari Urpalainen
+	* xml_patch_main.c:
+	- patched doc saved to file (thanks to Forjan Frederic)
+	* xml_patch.c:
+	- fixed a change in the spec, when comments and PIs are to be replaced;
+	  a bug with escaping '<'
+	- added a "msel" selector option to <add>, <replace> & <remove>;
+	  so multiple nodes can be located and e.g. several nodes can be deleted
+	  with a single request (//@elem). This is NOT specified in the I-D. If nested
+	  nodes found in replace & remove, only parents are used
+
+21.10.2005 Jari Urpalainen
+	* xml_patch.c:
+	- fixed a bug with implicit xml-prefixed namespace
+          "http://www.w3.org/XML/1998/namespace"
+
+26.09.2005 Jari Urpalainen
+	* xml_patch.c:
+	- fixed a bug when replacing a text node with empty content
+	- bugfix: recursively replace all ns references
+
+14.09.2005 Jari Urpalainen
+	* xml_patch.c:
+	- fixed a bug with default ns usage
+	- tests for multiple overlapping namespaces
+	* xml_patch_main.c:
+	- better printing
+
+25.05.2005 Jari Urpalainen
+	* Initial build
+

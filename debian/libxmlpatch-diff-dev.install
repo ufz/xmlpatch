@@ -1,0 +1,4 @@
+debian/tmp/usr/lib/pkgconfig/libxmldiff.pc
+debian/tmp/usr/include/libxmldiff/*.h
+debian/tmp/usr/lib/libxmldiff.so
+debian/tmp/usr/lib/libxmldiff.a

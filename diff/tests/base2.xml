@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<title xmlns:x="urn:foo" 
+       xmlns:d="urn:bar">
+  <x:bar p="1"/>   
+  <bar xmlns="urn:huuhhaa:uri">
+     <x:foo a="1"/>
+     <baz xmlns="urn:huuhhaa:uri"/> 
+  </bar>
+  <x:bar p="3"/>   
+  <d:bar p="4"/>   
+</title>

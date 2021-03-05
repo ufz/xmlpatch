@@ -1,0 +1,2 @@
+debian/tmp/usr/lib/libxmldiff.so.*
+debian/tmp/usr/bin/xml-diff
