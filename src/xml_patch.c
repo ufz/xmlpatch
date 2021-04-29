@@ -21,8 +21,6 @@
  *
  */
 
-#include "config.h"
-
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
@@ -30,7 +28,9 @@
 #include <assert.h>
 #include <signal.h>
 #include <ctype.h>
+#if !defined(WIN32)
 #include <unistd.h>
+#endif
 
 #include <libxml/tree.h>
 #include <libxml/xpath.h>
@@ -69,8 +69,10 @@ static int is_function(const char *pcsz)
     return 0;
 }
 
+#if !defined(WIN32)
 static int str_alloc_cat(char **ppb, int *pcb, const char *fmt, ...)
 			__attribute__((__format__ (__printf__, 3, 4)));
+#endif
 
 /** reallocates and appends to a string with printf format va-list */
 static int str_alloc_cat(char **ppb, int *pcb, const char *fmt, ...)
