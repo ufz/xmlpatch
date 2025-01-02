@@ -1,0 +1,13 @@
+<root xmlns:y="urn:xxx">
+    <add sel="*/foo[@a='1']" pos="before">
+        <foo a="3"/>
+        <!--  comment  -->
+    </add>
+    <add sel="*/foo[@a='1']" type="@b">foo</add>
+    <add sel="*/foo[@a='1']" type="namespace::p">urn:xxx</add>
+    <add sel="*/foo[@a='1']" type="@y:b">bar</add>
+    <remove sel="*/text()[1]"/>
+    <remove sel="*/bar[@a='3']"/>
+    <remove sel="*/foo[@b='foo']/@y:b"/>
+    <remove sel="*/foo[@b='foo']/namespace::p"/>
+</root>

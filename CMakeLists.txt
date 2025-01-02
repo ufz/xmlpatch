@@ -8,3 +8,8 @@ target_link_libraries(xmlpatch PUBLIC LibXml2::LibXml2)
 target_include_directories(xmlpatch INTERFACE src)
 set_target_properties(xmlpatch PROPERTIES PUBLIC_HEADER src/xml_patch.h)
 install(TARGETS xmlpatch)
+
+include(CTest)
+if(BUILD_TESTING)
+  add_subdirectory(tests)
+endif()
