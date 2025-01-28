@@ -1,13 +1,28 @@
 cmake_minimum_required(VERSION 3.13)
-project(xmlpatch VERSION 0.4.0)
+project(xmlpatch VERSION 0.4.5)
+set(VERSION ${CMAKE_PROJECT_VERSION})
+configure_file(cmake_config.h.in ${PROJECT_BINARY_DIR}/config.h @ONLY)
+include_directories(${PROJECT_BINARY_DIR})
 
 find_package(LibXml2 REQUIRED)
-
 add_library(xmlpatch src/xml_patch.c)
 target_link_libraries(xmlpatch PUBLIC LibXml2::LibXml2)
 target_include_directories(xmlpatch INTERFACE src)
 set_target_properties(xmlpatch PROPERTIES PUBLIC_HEADER src/xml_patch.h)
 install(TARGETS xmlpatch)
+
+find_package(PkgConfig)
+if(PKG_CONFIG_FOUND)
+    # xmldiff requires glib
+    pkg_check_modules(glib IMPORTED_TARGET glib-2.0)
+    if(glib_FOUND)
+        add_library(xmldiff diff/xml_diff.c)
+        target_link_libraries(xmldiff PUBLIC LibXml2::LibXml2 PkgConfig::glib)
+        target_include_directories(xmldiff INTERFACE diff)
+        set_target_properties(xmldiff PROPERTIES PUBLIC_HEADER diff/xml_diff.h)
+        install(TARGETS xmldiff)
+    endif()
+endif()
 
 include(CTest)
 if(BUILD_TESTING)
